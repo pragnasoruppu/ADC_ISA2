@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragna Soruppu - Projects</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Optima:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Neutraface+Text:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Neutraface Text', sans-serif;
+            background-color: #FFFBE8;
+            color: #2966AC;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: 'Havelock titling', serif;
+            font-size: 24px;
+            font-weight: medium;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #2966AC;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #f7da59;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .project {
+            display: flex;
+            background-color: #f7da59a9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 300px;
+        }
+
+        .project-image {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            flex: 1;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .project-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .project-content:hover .project-inner {
+            transform: rotateY(180deg);
+        }
+
+        .project-front, .project-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .project-back {
+            background-color: #2966AC;
+            color: #FFFBE8;
+            transform: rotateY(180deg);
+        }
+
+        .project h2 {
+            font-family: 'Optima', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2966AC;
+        }
+
+        .project-back h2 {
+            color: #f7da59;
+        }
+
+        .project p {
+            font-size: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            background-color: #2966AC;
+            color: #FFFBE8;
+        }
+
+        .email-link {
+            color: #FFFBE8;
+            text-decoration: none;
+            font-weight: medium;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #f7da59;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Pragna Soruppu</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mywork.html">My work</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="projects">
+                <div class="project">
+                    <div class="project-image">
+                        <img src="HeatIQ STOVE.png" alt="HeatIQ - Smart cooking solutions">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-inner">
+                            <div class="project-front">
+                                <h2>HeatIQ - Smart cooking solutions</h2>
+                                <p>This project aims to design a smart stove system and companion mobile app that simplify cooking and enhance safety for multitasking users.</p>
+                            </div>
+                            <div class="project-back">
+                                <h2>HeatIQ Features</h2>
+                                <p>Real-time monitoring, heat automation, and intuitive controls for a seamless and efficient cooking experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="O'er lanes.png" alt="O'er lanes - Game design">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-inner">
+                            <div class="project-front">
+                                <h2>O'er lanes - Game design</h2>
+                                <p>O'er Lanes is a mobile game with a simple but addictive concept. It's an endless arcade hopper where you control a character and try to navigate busy roads, train tracks, and rivers.</p>
+                            </div>
+                            <div class="project-back">
+                                <h2>O'er lanes Gameplay</h2>
+                                <p>Hop from platform to platform, dodging traffic and other hazards to get as far as possible in this exciting mobile game!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="NexGate.png" alt="NexGate - The smart way in">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-inner">
+                            <div class="project-front">
+                                <h2>NexGate - The smart way in</h2>
+                                <p>NexGate is an innovative smart door solution that enhances home security and convenience.</p>
+                            </div>
+                            <div class="project-back">
+                                <h2>NexGate Features</h2>
+                                <p>Seamless communication, real-time updates, and reliable access control for safe and efficient home entry processes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="Graphic Zine.png" alt="Graphic Zine - A day in a design school">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-inner">
+                            <div class="project-front">
+                                <h2>Graphic Zine - A day in a design school</h2>
+                                <p>The "A Day in Design School" zine is like a colorful trip through creativity using only two colors. It shows the fun and learning in design school with simple pictures and words.</p>
+                            </div>
+                            <div class="project-back">
+                                <h2>Zine Highlights</h2>
+                                <p>Discover how creativity shines even with limited resources. Experience the excitement of learning and creating in design school!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Let's Connect!</p>
+        <p>
+            <a href="mailto:pragnasoruppu08@gmail.com" class="email-link">email: pragnasoruppu08@gmail.com</a>
+        </p>
+        <br>
+        <p>All Rights Reserved</p>
+    </footer>
+</body>
+</html>
